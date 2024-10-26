@@ -436,7 +436,7 @@ section {
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .centertext {
         margin-top: 400px;
         font-size: 32px;
