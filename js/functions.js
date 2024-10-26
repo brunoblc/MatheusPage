@@ -25,32 +25,42 @@ $( document ).ready(function() {
 
 	
 // CONTACT FORM
-	$("input, textarea").focus(function() {
-		$(this).prev("label").hide();
-		$(this).prev().prev("label").hide();	 		 	
-	});
-	   
-	$("#contact_form").submit(function() {
-		var name = $("#name").val();
-		var phone = $("#phone").val();		
-		var email = $("#email").val();
-		var comment = $("#comment").val();
-		
-			$('#contact_form').animate({opacity:'0.3'}, 500);
-				
-			var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&comment=' + comment;
-			//alert (dataString);return false;
-			$.ajax({
-				type: "POST",
-				url: "form/sendmail.php",
-				data: dataString,
-				success: function() {
-					$("#contact_form").animate({opacity:'1'}, 500);
-					$('#contact_form').slideUp(300);
-					$('#success').delay(2000).css("display", "block");
-				}
-			});
-			return false;
-	});
+$(document).ready(function() {
+    $("input, textarea").focus(function() {
+        $(this).prev("label").hide();
+        $(this).prev().prev("label").hide();	 		 	
+    });
+
+    $("#contact_form").submit(function(event) {
+        event.preventDefault(); 
+
+        var name = $("#name").val();
+        var phone = $("#phone").val();
+        var email = $("#email").val();
+        var comment = $("#comment").val();
+
+        $('#contact_form').animate({ opacity: '0.3' }, 500);
+
+        var dataString = 'name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&phone=' + encodeURIComponent(phone) + '&comment=' + encodeURIComponent(comment);
+
+        $.ajax({
+            type: "POST",
+			url: "sendmail.php", 
+            data: dataString,
+            success: function(response) {
+                $("#contact_form").animate({ opacity: '1' }, 500);
+                $('#contact_form').slideUp(300);
+                $('#success').delay(200).fadeIn(300); 
+            },
+            error: function() {
+                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+                $("#contact_form").animate({ opacity: '1' }, 500);
+            }
+        });
+
+        return false; 
+    });
+});
+
 	  
 });
