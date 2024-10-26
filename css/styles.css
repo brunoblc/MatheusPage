@@ -170,7 +170,6 @@ section {
 }
 
 .centertext{
-    margin-top: 400px;
     font-size: 32px;
     font-weight: 500;
 }
@@ -367,6 +366,11 @@ section {
 	#header .logo {
 		width: 200px;
 	}
+
+	.centertext {
+		font-size: 32px;
+		font-weight: 500;
+	}
 	
 	#header h1 {
 		display: none;
@@ -415,6 +419,11 @@ section {
 	
 	#header .col-md-8 {
 		top: 5%;
+	}
+
+	.centertext {
+		font-size: 32px;
+		font-weight: 500;
 	}
 }
 
