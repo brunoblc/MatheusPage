@@ -39,6 +39,7 @@ h2 {
 h1 {
     font-size: 42px;
     line-height: 62px;
+	margin-bottom: 20px;
 }
 
 h2 {
@@ -164,7 +165,7 @@ section {
 }
 
 .logo{
-	margin-top: 250px;
+	margin-top: 200px;
 	width: 600px;
 }
 
@@ -175,8 +176,10 @@ section {
 }
 
 .centertext{
+	margin-top: 80px;
     font-size: 32px;
     font-weight: 500;
+	text-align: center;
 }
 
 .textMedium{
@@ -228,6 +231,15 @@ section {
 
 #about{
 	background-color: #000E1A;
+}
+
+   
+.centertext {
+     text-align: center;
+  }
+
+.middleSearch{
+	 margin-top: 250px;
 }
 
 #about i {
