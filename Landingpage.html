@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Mariano e Lima</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #001f3f;
+        }
+
+        .container {
+            position: relative;
+            max-width: 375px; /* Ajuste para o tamanho real da imagem */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .icon {
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        /* Posicionamento específico dos ícones */
+        .icon.internet {
+            bottom: 180px;
+            left: 40px;
+        }
+
+        .icon.email {
+            bottom: 180px;
+            left: 160px;
+        }
+
+        .icon.whatsapp {
+            bottom: 180px;
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/images/landingPage.png" alt="Mariano e Lima">
+        <a href="https://brunoblc.github.io/MatheusPage/" target="_blank">
+            <div class="icon internet"></div>
+        </a>
+        <a href="mailto:brunoluiz_2210@hotmail.com">
+            <div class="icon email"></div>
+        </a>
+        <a href="https://wa.me/5511943297888" target="_blank">
+            <div class="icon whatsapp"></div>
+        </a>
+    </div>
+</body>
+</html>
